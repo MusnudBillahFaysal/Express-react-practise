@@ -1,5 +1,27 @@
 const express = require('express');
 const app = express();
+//FashionData
+const FashoionData = [
+  {
+    id: 1,
+    image:
+      'https://new.axilthemes.com/demo/react/papr/images/posts/post_21.jpg?imwidth=384',
+
+    headline: 'Boxed Water Partners With Rag & Bone To Tap Consumer Creativity',
+
+    description: 'Get Around Easily With A New York Limousine Service.',
+    link: 'https://example.com/article1',
+  },
+  {
+    id: 2,
+    image:
+      'https://new.axilthemes.com/demo/react/papr/images/posts/post_14.jpg',
+    headline: 'To Keep Makeup Looking Fresh Take A Powder',
+
+    description: 'Curabitur egestas est vitae sem blandit tincidunt. ',
+    link: 'https://example.com/article2',
+  },
+];
 
 //SportsmainData
 const SportsmainData = [
@@ -80,17 +102,17 @@ const TechnologyData = [
     description: 'Get Around Easily With A New York Limousine Service.',
     link: 'https://example.com/article2',
   },
-  {
-    id: 3,
-    image:
-      'https://new.axilthemes.com/demo/react/papr/images/posts/post_1.jpg?imwidth=1080',
-    headline:
-      'VR Is the Use of Computer Technology to Create a Simulated Environment.',
+  // {
+  //   id: 3,
+  //   image:
+  //     'https://new.axilthemes.com/demo/react/papr/images/posts/post_1.jpg?imwidth=1080',
+  //   headline:
+  //     'VR Is the Use of Computer Technology to Create a Simulated Environment.',
 
-    description:
-      'Curabitur egestas est vitae sem blandit tincidunt. Nunc cursus interdum odio sit amet gravida',
-    link: 'https://example.com/article2',
-  },
+  //   description:
+  //     'Curabitur egestas est vitae sem blandit tincidunt. Nunc cursus interdum odio sit amet gravida',
+  //   link: 'https://example.com/article2',
+  // },
 ];
 
 // mockpostsData
@@ -259,6 +281,10 @@ const mockNewsDetails = {
 //   },
 //   // Add more detail entries
 // };
+
+app.get('/fashion', (req, res) => {
+  res.json({ FashoionData });
+});
 
 app.get('/sportsmain', (req, res) => {
   res.json({ SportsmainData });
